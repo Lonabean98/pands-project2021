@@ -1,11 +1,24 @@
-from sklearn.datasets import load_iris
+#with open('iris.data', 'r') as f:
+    #data=f.read()
+    #print(data)
 
-iris = load_iris()
-print('The data matrix:\n',iris['data'])
-print('The classification target:\n',iris['target'])
-print('The names of the dataset columns:\n',iris['feature_names'])
-print('The names of target classes:\n',iris['target_names'])
-print('The full description of the dataset:\n',iris['DESCR'])
-print('The path to the location of the data:\n',iris['filename'])
+import pandas as pd 
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+
+df = pd.read_csv("iris.data")  
+df.columns = ["sepal length", "sepal width", "petal length", "petal width", "variety"]
+
+#head() command shows first x number of lines. Specify number in bracket  
+print(df.head(10))  
 
 
+summary = df.describe(include="all")  
+summaryt = summary.transpose()  
+print("")
+print("Summary Statistics")
+print(summaryt)
+
+#plt.hist(df.columns[1])
+#plt.show()
