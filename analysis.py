@@ -11,28 +11,30 @@ df = pd.read_csv("iris.data")
 
 df.columns = ["Sepal Length (cm)", "Sepal Width (cm)", "Petal Length (cm)", "Petal Width (cm)", "Variety"]
 
+setosa = df[df['Variety'] == 'Iris-setosa']
+versicolor = df[df['Variety'] == 'Iris-versicolor']
+virginica = df[df['Variety'] == 'Iris-virginica']
 
 print(df.sample(10))  
 #prints data from random sample of 10 flowers
 
 
-def readData():
+def readData(x,y):
     #function that reads the data and prints a sumamry of the variables.
-
-    
-    summary = df.describe()
-    #df.describe() generates descriptive statistics. 
-    #Reference: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.describe.html
-    summary2 = summary.transpose() 
-    #transpose index and columns
-    #  Reference: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.transpose.html 
-    print("")
-    print("Summary Statistics")
-    print(summary2)
+    summary= x.describe()
+    summaryt= summary.transpose()
+    print(y)
+    print('=========')
+    print(summaryt)
+    print('=========')
     with open('Summary.txt', 'w') as f:
-        f.write(str(summary2))
-    # write the transposed summary into a .txt file called 'Summary'.
-readData()
+        f.write(str(summaryt))
+
+
+
+readData(setosa,'Setosa Summary')
+readData(virginica, 'Virginica Summary')
+readData(versicolor, 'Versicolor Summary')
 
 
 
@@ -73,9 +75,9 @@ def scatter(x,y, z):
     
     
 scatter("Sepal Length (cm)", "Sepal Width (cm)", 'r')
-scatter("Sepal Length (cm)", "Petal Length (cm)", 'b')
-scatter("Sepal Length (cm)", "Petal Width (cm)", 'g')
-scatter("Sepal Width (cm)", "Petal Length (cm)", 'y')
-scatter("Sepal Width (cm)","Petal Width (cm)", 'purple' )
-scatter("Petal Width (cm)", "Petal Length (cm)" , 'cyan')
+#scatter("Sepal Length (cm)", "Petal Length (cm)", 'b')
+#scatter("Sepal Length (cm)", "Petal Width (cm)", 'g')
+#scatter("Sepal Width (cm)", "Petal Length (cm)", 'y')
+#scatter("Sepal Width (cm)","Petal Width (cm)", 'purple' )
+#scatter("Petal Width (cm)", "Petal Length (cm)" , 'cyan')
 
