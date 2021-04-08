@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import random
 import seaborn as sns
+import matplotlib.patches as mpatches
 
 
 df = pd.read_csv("iris.data")  
@@ -27,17 +28,36 @@ def readData(x,y):
     print('=========')
     print(summaryt)
     print('=========')
-    with open('Summary.txt', 'w') as f:
-        f.write(str(summaryt))
+    return summaryt
+    
 
+sum1=readData(setosa,'Setosa Summary')
+sum2=readData(virginica, 'Virginica Summary')
+sum3=readData(versicolor, 'Versicolor Summary')
 
+with open('Summary.txt', 'w') as f:
+    def writesummary(x,y):
+        f.write(y)
+        f.write('\n')
+        f.write('=========')
+        f.write(str(x))
+        f.write('\n')
+        f.write('\n')
+    writesummary(sum1, 'Setosa Summary')
+    writesummary(sum2, 'Virginica Summary')
+    writesummary(sum3, 'Versicolor Summary')
+    
+    
+    
+            
+           
 
-readData(setosa,'Setosa Summary')
-readData(virginica, 'Virginica Summary')
-readData(versicolor, 'Versicolor Summary')
-
-
-
+#def pairplot():
+#    sns.pairplot(df, hue='Variety')
+#    plt.savefig('pairplot.png')
+#    plt.show()
+#    plt.close()
+#pairplot()
 
 def plothist(x, y):
     #This function takes in a column name and colour and uses 
@@ -65,19 +85,26 @@ plothist("Petal Width (cm)", "yellow")
       
 
 
-def scatter(x,y, z):
+def scatter(x,y):
     #function that generates a scatter plot for both Sepal variables.
     plt.xlabel(x)
     plt.ylabel(y)
+    colormap= {'Iris-setosa': 'red', 'Iris-virginica': 'blue', 'Iris-versicolor': 'green'}
+    colors = [colormap[x] for x in df['Variety']]
     plt.title(x+ " vs "+ y)
-    plt.scatter(df[x],df[y], c=z)
+    red_patch = mpatches.Patch(color='red', label='Iris-setosa')
+    blue_patch = mpatches.Patch(color='blue', label='Iris-virginica')
+    green_patch = mpatches.Patch(color='green', label='Iris-versicolor')
+    plt.legend(handles=[red_patch, blue_patch, green_patch])
+    plt.scatter(df[x],df[y], c=colors)
     plt.show()
     
     
-scatter("Sepal Length (cm)", "Sepal Width (cm)", 'r')
-#scatter("Sepal Length (cm)", "Petal Length (cm)", 'b')
-#scatter("Sepal Length (cm)", "Petal Width (cm)", 'g')
-#scatter("Sepal Width (cm)", "Petal Length (cm)", 'y')
-#scatter("Sepal Width (cm)","Petal Width (cm)", 'purple' )
-#scatter("Petal Width (cm)", "Petal Length (cm)" , 'cyan')
+scatter("Sepal Length (cm)", "Sepal Width (cm)")
+#scatter("Sepal Length (cm)", "Petal Length (cm)")
+#scatter("Sepal Length (cm)", "Petal Width (cm)")
+#scatter("Sepal Width (cm)", "Petal Length (cm)")
+#scatter("Sepal Width (cm)","Petal Width (cm)" )
+#scatter("Petal Width (cm)", "Petal Length (cm)")
+
 
