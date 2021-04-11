@@ -40,11 +40,13 @@ Each column of the data file is then labelled. (pandas.DataFrame.columns, n.d.)
 
  
 A random sample of data for 10 flowers is printed to the terminal.
+
 ![image](https://user-images.githubusercontent.com/77697552/114313314-fdbed200-9aed-11eb-970c-57e7499cf120.png)
 
 
 Making the summary and writing to a text file
 A summary of the 4 variables being analysed is written to a text file using the following code. (Python | Pandas Dataframe.describe() method, n.d.)
+
 ![image](https://user-images.githubusercontent.com/77697552/114313323-04e5e000-9aee-11eb-9668-7fd8c46d073f.png)
 
  
@@ -91,6 +93,7 @@ A pairplot is created using the following code. Each of the three species of iri
 
  
 Pairplots:
+
 ![image](https://user-images.githubusercontent.com/77697552/114313383-3199f780-9aee-11eb-8985-c3f752ab567b.png)
 
 
@@ -100,27 +103,32 @@ There are 16 plots, plotting all four variables against each other. The plots be
 The plots along the NW-SE diagonal are not scatter plots but the distribution of the data in question. These distribution plots give more information than the overall histograms presented above, allowing to refine the analysis per species. The analysis of these distribution plots confirms the hypothesis above: the different peaks in the overall histogram corresponds to different species. The petal length and petal width show a very distinct peak of lowest petal size for a species of Iris. This is the setosa species. The distributions for the other two species overlap somewhat, virginica being slightly larger than versicolor. The overlap is more important for the sepal variable, indicating that there is not much difference in sepal size (this variable may not matter as much to the breeders).
 
 Individual scatter plots 
+
 ![image](https://user-images.githubusercontent.com/77697552/114313389-378fd880-9aee-11eb-9c94-abcc015bbc6a.png)
 
 
  
 The code outputs a scatter plot of each pair of variables. Six scatter plots are created in turn. The colours of the species are hard-coded. There are six unique groups of 2 items out of a collection of 4 items (6 “combinations” in mathematics). 
 In all of these scatter plots, we can see that setosa species is linearly separable to the other two. 
+
 ![image](https://user-images.githubusercontent.com/77697552/114313394-3eb6e680-9aee-11eb-8bdd-0f433f4271d4.png)
 
  
 The above plot shows that the setosa species has sepals that are wide but not very long. They are the “roundest” sepals. The other two variaties have a roughly similar sepal width to length ratio. While the virginica and versicolor species are comparable, it seems that the sepals of virginica are slightly longer. 
 There appears to be a linear correlation between these two variables for setosa only. There is no clear correlation for the other two species. 
+
 ![image](https://user-images.githubusercontent.com/77697552/114313402-44acc780-9aee-11eb-8730-b76a4c4633a1.png)
 
 
 
  
 From the above plot, we can see that the sepals and petals of the setosa species are similar in length as there is not much spread within the group. We can also see that the sepals and petals of the setosa species are shorter in comparison to the other two variants. The virginica species has some of the longest sepals and petals as the data points extend almost to the top right of the plot. The versicolor species have average petal and sepal lengths. There appears to be a linear positive correlation between petal length and sepal length within each species. This means that a line can be drawn through the data “cloud”, with little variability on each part of the line. The slopes of the lines are different. Petal length is related to sepal length, the “biggest” flowers in each species having proportionately bigger sepals and petals. 
+
 ![image](https://user-images.githubusercontent.com/77697552/114313404-4a0a1200-9aee-11eb-86b8-b9e48811b678.png)
 
  
 We can see that the setosa species has the lowest petal width- sepal length ratio of the 3. The setosa species also has very little variation in petal widths and sepal lengths. The virgincia species has some of the longest petal widths and sepal lengths. There is a lot of variation in the virgincia data as the points are very spread out.  The versicolor species is somewhere in between. There doesn’t appear to be any correlation between these variables within each species.
+
 ![image](https://user-images.githubusercontent.com/77697552/114313406-4e362f80-9aee-11eb-955c-e1e60c422fbd.png)
 
 
