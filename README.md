@@ -1,6 +1,6 @@
 # pands-project2021
 
-The dataset
+#The dataset
 This project consists in analysing the Fisher’ Iris data set. The data set consists of 50 samples from each of three species of Iris. The set contains the length and width measurements for sepals and petals of the Iris setosa, Iris virginica, Iris versicolor. The columns of the data set correspond to sepal length, sepal width, petal length, petal width and species. The data set was created by Sir Ronald Aylmer Fisher in 1936. It has been used extensively, including most recently for statistical classification techniques in machine learning. (Iris flower data set- Wikipedia, n.d.) 
 The three species of Iris included in the dataset:
 
@@ -12,8 +12,10 @@ The variables in the dataset:
  ![image](https://user-images.githubusercontent.com/77697552/114313277-d7009b80-9aed-11eb-8c94-7ea0800b4686.png)
 
 Irises have three sepals, which are usually spreading or droop downwards, also referred to as "falls". The three, sometimes reduced, petals stand upright, partly behind the sepal bases. They are called "standards". (Iris (plant)- Wikipedia, n.d.) Unlike most other flowers, the most “showy” part of the Iris is actually the sepal, not the petal. 
-Modules used to analyse the dataset
+
+## Modules used to analyse the dataset
 The first step consists in importing the Python modules that are used to analyse the dataset: Pandas, matplotlib.pyplot, numpy, random, seaborn, matplotlib.patches
+
 Explanation of Code to import the modules:
 
 ![image](https://user-images.githubusercontent.com/77697552/114313291-e8e23e80-9aed-11eb-973b-d084c48d5c19.png)
@@ -22,13 +24,19 @@ Explanation of Code to import the modules:
 
  
 Pandas: A data analysis and manipulation tool built using the Python programming language.
+
 Matplotlib.pyplot: Matplotlib is a library for data visualisation. Pyplot is an interface which provides a MATPLOT-like way of plotting. (matplotlib.pyplot, n.d.)
+
 Numpy: brings the computational power of languages like C to Python, which is easier to use. (Numpy, n.d.)
+
 Random: Implements pseudo-random number generators. 
+
 Seaborn: Statistical data visualisation library based on matplotlib. (seaborn: statistical data visualization, n.d.)
+
 Matplotlib.patches: A patch is a 2D artist with a face color and an edge color. (matplotlib.patches.Patch- Matplotlib.org, n.d.)
 
-Reading the dataset
+## Reading the dataset
+
 The data is read into a csv file using the following code. (pandas.read_csv, n.d.)
 
 ![image](https://user-images.githubusercontent.com/77697552/114313303-f39cd380-9aed-11eb-89da-894b587eb6d4.png)
@@ -44,7 +52,8 @@ A random sample of data for 10 flowers is printed to the terminal.
 ![image](https://user-images.githubusercontent.com/77697552/114313314-fdbed200-9aed-11eb-970c-57e7499cf120.png)
 
 
-Making the summary and writing to a text file
+## Making the summary and writing to a text file
+
 A summary of the 4 variables being analysed is written to a text file using the following code. (Python | Pandas Dataframe.describe() method, n.d.)
 
 ![image](https://user-images.githubusercontent.com/77697552/114313323-04e5e000-9aee-11eb-9668-7fd8c46d073f.png)
@@ -64,7 +73,8 @@ Sepal Width: The setosa sample contains the highest value for sepal width (4.4 c
 Petal Length: Virginicas on average have the longest petal length, but also the highest standard deviation. This means that there is a lot of variation in petal length in this species. On average, setosas have the shortest petals. 
 Petal Width: Setosas also have the shortest petals on average. 
 
-Histograms
+## Histograms
+
 Histograms of each variables are created and saved to .png files using the following code. The colours for each plot are hard-coded (primary colours were selected)
 
 ![image](https://user-images.githubusercontent.com/77697552/114313343-116a3880-9aee-11eb-83f2-da08584f820d.png)
@@ -92,7 +102,7 @@ A pairplot is created using the following code. Each of the three species of iri
 ![image](https://user-images.githubusercontent.com/77697552/114313382-2d6dda00-9aee-11eb-9f80-0e680b47d98f.png)
 
  
-Pairplots:
+## Pairplots:
 
 ![image](https://user-images.githubusercontent.com/77697552/114313383-3199f780-9aee-11eb-8985-c3f752ab567b.png)
 
@@ -102,7 +112,7 @@ There are 16 plots, plotting all four variables against each other. The plots be
 
 The plots along the NW-SE diagonal are not scatter plots but the distribution of the data in question. These distribution plots give more information than the overall histograms presented above, allowing to refine the analysis per species. The analysis of these distribution plots confirms the hypothesis above: the different peaks in the overall histogram corresponds to different species. The petal length and petal width show a very distinct peak of lowest petal size for a species of Iris. This is the setosa species. The distributions for the other two species overlap somewhat, virginica being slightly larger than versicolor. The overlap is more important for the sepal variable, indicating that there is not much difference in sepal size (this variable may not matter as much to the breeders).
 
-Individual scatter plots 
+## Individual scatter plots 
 
 ![image](https://user-images.githubusercontent.com/77697552/114313389-378fd880-9aee-11eb-9c94-abcc015bbc6a.png)
 
@@ -145,7 +155,8 @@ Setosas have the narrowest petals and the widest sepals. There is a lot more var
  
 The setosa species have the shortest and thinnest petals. Virginica has the longest and widest petals. Versicolour has average petal width and length. There is a strong overall positive linear correlation for the entire dataset, and a weaker correlation among each dataset. There is not much overlap between the data “clouds”. The overall size of the petal (length and width) distinguishes clearly between the species. This plot could even be used as a criterion to determine the species if no other information about a flower was available such as its colour pattern and so on. In this graph we can see most clearly what distinguishes the species: a species with small petals, one with medium petals and one with large petals. 
 
-Discussion and conclusion
+## Discussion and conclusion
+
 In conclusion, the setosa species seems to be the smallest in general for both sepal and petal size. Virginica and versicolor are not easily distinguishable by their individual sepal and petal size variables. 
 Iris setosa is a dwarf species: it is a dwarf version of Iris sibirica (Wikipedia - Iris setosa). Referring back to the photos at the top of this readme file, one can see that setosa has a more compact, round flower shape. Its appearance is most different from the others. Its size and overall shape could help a non-botanist to identify this species. The compact shape of Iris setosa is probably an adaptation to the cold arctic environments to which it is native. This species is easy to identify using several of the individual variables measured in the dataset that do not overlap, for example petal length < 1.9 cm.
 Referring back to the photos, the other two, virginica and versicolor, have relatively similar flower sizes, and slightly different petal and sepal shapes. They have different colour markings. Versicolor means "variously coloured". (Iris versicolor- Wikipedia, n.d.). Iris virginica and versicolor are both native to North America. (Iris virginica- Wikipedia, n.d.)
