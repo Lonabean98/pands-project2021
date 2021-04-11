@@ -1,6 +1,7 @@
 # pands-project2021
 
-#The dataset
+## The dataset
+
 This project consists in analysing the Fisher’ Iris data set. The data set consists of 50 samples from each of three species of Iris. The set contains the length and width measurements for sepals and petals of the Iris setosa, Iris virginica, Iris versicolor. The columns of the data set correspond to sepal length, sepal width, petal length, petal width and species. The data set was created by Sir Ronald Aylmer Fisher in 1936. It has been used extensively, including most recently for statistical classification techniques in machine learning. (Iris flower data set- Wikipedia, n.d.) 
 The three species of Iris included in the dataset:
 
