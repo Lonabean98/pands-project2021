@@ -127,35 +127,41 @@ The plots along the NW-SE diagonal are not scatter plots but the distribution of
 The code outputs a scatter plot of each pair of variables. Six scatter plots are created in turn. The colours of the species are hard-coded. There are six unique groups of 2 items out of a collection of 4 items (6 “combinations” in mathematics). 
 In all of these scatter plots, we can see that setosa species is linearly separable to the other two. 
 
-![image](https://user-images.githubusercontent.com/77697552/114313394-3eb6e680-9aee-11eb-8bdd-0f433f4271d4.png)
+![image](https://user-images.githubusercontent.com/77697552/114314021-f4833480-9af0-11eb-8226-479e4ef3605b.png)
+
 
  
 The above plot shows that the setosa species has sepals that are wide but not very long. They are the “roundest” sepals. The other two variaties have a roughly similar sepal width to length ratio. While the virginica and versicolor species are comparable, it seems that the sepals of virginica are slightly longer. 
 There appears to be a linear correlation between these two variables for setosa only. There is no clear correlation for the other two species. 
 
-![image](https://user-images.githubusercontent.com/77697552/114313402-44acc780-9aee-11eb-8730-b76a4c4633a1.png)
+![image](https://user-images.githubusercontent.com/77697552/114314030-0238ba00-9af1-11eb-9ea1-00261d1b873a.png)
+
 
 
 
  
 From the above plot, we can see that the sepals and petals of the setosa species are similar in length as there is not much spread within the group. We can also see that the sepals and petals of the setosa species are shorter in comparison to the other two variants. The virginica species has some of the longest sepals and petals as the data points extend almost to the top right of the plot. The versicolor species have average petal and sepal lengths. There appears to be a linear positive correlation between petal length and sepal length within each species. This means that a line can be drawn through the data “cloud”, with little variability on each part of the line. The slopes of the lines are different. Petal length is related to sepal length, the “biggest” flowers in each species having proportionately bigger sepals and petals. 
 
-![image](https://user-images.githubusercontent.com/77697552/114313404-4a0a1200-9aee-11eb-86b8-b9e48811b678.png)
+![image](https://user-images.githubusercontent.com/77697552/114314042-0a90f500-9af1-11eb-9eaf-adf473e93941.png)
+
 
  
 We can see that the setosa species has the lowest petal width- sepal length ratio of the 3. The setosa species also has very little variation in petal widths and sepal lengths. The virgincia species has some of the longest petal widths and sepal lengths. There is a lot of variation in the virgincia data as the points are very spread out.  The versicolor species is somewhere in between. There doesn’t appear to be any correlation between these variables within each species.
 
-![image](https://user-images.githubusercontent.com/77697552/114313406-4e362f80-9aee-11eb-955c-e1e60c422fbd.png)
+![image](https://user-images.githubusercontent.com/77697552/114314054-12509980-9af1-11eb-8135-9bf641794cd2.png)
+
 
 
  
 The setosa species has some of highest sepal widths compared to petal lengths. The sepal width of this species is much greater than the petal length. The other two species have similar ratios, again with the virginicas tending to be longer than the versicolors. As above there is little or no apparent correlation between these variables within each species. 
  
-![image](https://user-images.githubusercontent.com/77697552/114313413-58582e00-9aee-11eb-9b33-26c0b56ac7eb.png)
+![image](https://user-images.githubusercontent.com/77697552/114314068-1da3c500-9af1-11eb-8489-8ba14d0d898b.png)
+
 
 Setosas have the narrowest petals and the widest sepals. There is a lot more variation in sepal width than in petal width, with no apparent correlation between the 2 variables. There seems to be a weak positive linear correlation for the two other species. 
 
-![image](https://user-images.githubusercontent.com/77697552/114313422-60b06900-9aee-11eb-8ff5-c88d0d4ee967.png)
+![image](https://user-images.githubusercontent.com/77697552/114314077-2399a600-9af1-11eb-9f81-3496f40a2014.png)
+
 
 
  
@@ -172,7 +178,8 @@ However, it is notoriously difficult to differentiate between Iris versicolor an
 
 With data analysis and data visualization of the Fisher data set, is it possible to find quantitative indicators to distinguish not only setosa from the other two species, but also between virginica and versicolor? The data analysis and visualizations show that the range of many of their variables overlap. We can try to find a combination of variables that is discriminant and allows to identify the species with minimal possibility of error. A possibility could be the ratio (i.e. slope) between some of these variables.  The petal width vs. sepal width plots seems to show a good linear relationship and a different slope (ratio petal width/sepal width) for the 3 species. A further analysis would be required to determine the slope of the linear regressions. This ratio could be used in the field to identify the 3 species. Alternatively, machine learning could be used to find unique combination of these variables as a discriminating factor between the species. 
 
-References
+## References
+
 Clemson Home and Garden Information Garden Centre. (n.d.). Retrieved from https://hgic.clemson.edu/factsheet/rain-garden-plants-iris-versicolor-and-iris-virginica/
 
 Cui, Y. (2020, April 25). The Iris Dataset — A Little Bit of History and Biology. Retrieved from towards data science: https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5
