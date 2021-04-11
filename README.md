@@ -68,9 +68,13 @@ Summary:
 
 Analysis of the summary:
 Petal width: From this summary, it is apparent that on average, the petal width of the 3 variants is the smallest variable. On average, the sepal length is the largest variable. The virginica species has the highest average sepal length of any species, but also has the highest standard deviation. 
+
 Sepal length: The virginica sample contains the highest sepal length value (7.9 cm) and also has the highest average sepal length (6.588). The setosa sample contains the lowest value (4.3 cm) and the lowest average (5 cm). However, setosas have the lowest standard deviation for sepal length, which means that there is very little variation. 
+
 Sepal Width: The setosa sample contains the highest value for sepal width (4.4 cm) as well as the highest average (3.4 cm). Setosas also have the highest standard deviation for sepal width (0.38 cm) but not by a large margin. On average, Versicolors have the thinnest sepals. 
+
 Petal Length: Virginicas on average have the longest petal length, but also the highest standard deviation. This means that there is a lot of variation in petal length in this species. On average, setosas have the shortest petals. 
+
 Petal Width: Setosas also have the shortest petals on average. 
 
 ## Histograms
@@ -97,6 +101,7 @@ Histograms:
 The histograms for petal length and petal width show two peaks, which indicates two groups of Irises with very different petal sizes. The sepal length and width show a more normal distribution (a bell-type curve). 
 
 Pairplots
+
 A pairplot is created using the following code. Each of the three species of irises is represented by a different colour. The code automatically selects the different colours for the different species and plots a legend of the meaning of the colours. 
 
 ![image](https://user-images.githubusercontent.com/77697552/114313382-2d6dda00-9aee-11eb-9f80-0e680b47d98f.png)
@@ -158,26 +163,43 @@ The setosa species have the shortest and thinnest petals. Virginica has the long
 ## Discussion and conclusion
 
 In conclusion, the setosa species seems to be the smallest in general for both sepal and petal size. Virginica and versicolor are not easily distinguishable by their individual sepal and petal size variables. 
+
 Iris setosa is a dwarf species: it is a dwarf version of Iris sibirica (Wikipedia - Iris setosa). Referring back to the photos at the top of this readme file, one can see that setosa has a more compact, round flower shape. Its appearance is most different from the others. Its size and overall shape could help a non-botanist to identify this species. The compact shape of Iris setosa is probably an adaptation to the cold arctic environments to which it is native. This species is easy to identify using several of the individual variables measured in the dataset that do not overlap, for example petal length < 1.9 cm.
 Referring back to the photos, the other two, virginica and versicolor, have relatively similar flower sizes, and slightly different petal and sepal shapes. They have different colour markings. Versicolor means "variously coloured". (Iris versicolor- Wikipedia, n.d.). Iris virginica and versicolor are both native to North America. (Iris virginica- Wikipedia, n.d.)
+
 However, it is notoriously difficult to differentiate between Iris versicolor and Iris virginica as both have similar growth habits, floral colors, and bloom times. In fact, they are often sold interchangeably in the trade as blue flag iris. (Clemson Home and Garden Information Garden Centre, n.d.) As they are found in the same region of the world, they may have a close common ancestor. 
+
 With data analysis and data visualization of the Fisher data set, is it possible to find quantitative indicators to distinguish not only setosa from the other two species, but also between virginica and versicolor? The data analysis and visualizations show that the range of many of their variables overlap. We can try to find a combination of variables that is discriminant and allows to identify the species with minimal possibility of error. A possibility could be the ratio (i.e. slope) between some of these variables.  The petal width vs. sepal width plots seems to show a good linear relationship and a different slope (ratio petal width/sepal width) for the 3 species. A further analysis would be required to determine the slope of the linear regressions. This ratio could be used in the field to identify the 3 species. Alternatively, machine learning could be used to find unique combination of these variables as a discriminating factor between the species. 
 
 References
 Clemson Home and Garden Information Garden Centre. (n.d.). Retrieved from https://hgic.clemson.edu/factsheet/rain-garden-plants-iris-versicolor-and-iris-virginica/
+
 Cui, Y. (2020, April 25). The Iris Dataset — A Little Bit of History and Biology. Retrieved from towards data science: https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5
+
 Hatterer, R. (2020, July 29). datasets.load_iris() in Python. Retrieved from Stackoverflow: https://stackoverflow.com/questions/43159754/datasets-load-iris-in-python
+
 Iris (plant)- Wikipedia. (n.d.). Retrieved from https://en.wikipedia.org/wiki/Iris_(plant)
+
 Iris flower data set- Wikipedia. (n.d.). Retrieved from https://en.wikipedia.org/wiki/Iris_flower_data_set
+
 Iris versicolor- Wikipedia. (n.d.). Retrieved from https://en.wikipedia.org/wiki/Iris_versicolor
+
 Iris virginica- Wikipedia. (n.d.). Retrieved from https://en.wikipedia.org/wiki/Iris_virginica
+
 matplotlib.patches.Patch- Matplotlib.org. (n.d.). Retrieved from https://matplotlib.org/stable/api/_as_gen/matplotlib.patches.Patch.html
+
 matplotlib.pyplot. (n.d.). Retrieved from matplotlib 3.4.1: https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html
+
 Numpy. (n.d.). Retrieved from Numpy.org: https://numpy.org/
+
 pandas.DataFrame.columns. (n.d.). Retrieved from pandas.pydata.org: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.columns.html
+
 pandas.read_csv. (n.d.). Retrieved from pandas.pydata.org: https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html
+
 Python | Pandas Dataframe.describe() method. (n.d.). Retrieved from geeksforgeeks.org: https://www.geeksforgeeks.org/python-pandas-dataframe-describe-method/#:~:text=Pandas%20describe()%20is%20used,shown%20in%20the%20examples%20below.
+
 seaborn: statistical data visualization. (n.d.). Retrieved from seaborn.pydata.org: https://seaborn.pydata.org/
+
 Wikipedia - Iris setosa. (n.d.). Retrieved from Wikipedia: https://en.wikipedia.org/wiki/Iris_setosa
 
 
