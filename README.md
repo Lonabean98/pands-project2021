@@ -68,6 +68,7 @@ Summary:
  
 
 Analysis of the summary:
+
 Petal width: From this summary, it is apparent that on average, the petal width of the 3 variants is the smallest variable. On average, the sepal length is the largest variable. The virginica species has the highest average sepal length of any species, but also has the highest standard deviation. 
 
 Sepal length: The virginica sample contains the highest sepal length value (7.9 cm) and also has the highest average sepal length (6.588). The setosa sample contains the lowest value (4.3 cm) and the lowest average (5 cm). However, setosas have the lowest standard deviation for sepal length, which means that there is very little variation. 
